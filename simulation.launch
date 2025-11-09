@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find smart_rover)/worlds/rover_world.world"/>
+    </include>
+    <node pkg="smart_rover" type="autonomous_control.py" name="autonomous_control" output="screen"/>
+</launch>
